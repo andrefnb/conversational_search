@@ -19,21 +19,37 @@ are motivated by long-running and complex tasks requiring multiple turns (possib
 to the right shows a typical pipeline for a conversational agent system. The vision is to address all of these
 aspects. We first focus on retrieval of relevant result content in context.
 
+
 Dataset
+
 MS MARCO web passage data
-• MS MARCO Passage Reranking data;
-• 10 million answer candidates from Bing search;
-• This data is publicly available.
+
+  • MS MARCO Passage Reranking data;
+
+  • 10 million answer candidates from Bing search;
+
+  • This data is publicly available.
+
 
 Implementation steps:
-• Retrieval;
-• Embeddings
-• Ranking
-• Conversation tracking
+
+  • Retrieval;
+
+  • Embeddings;
+
+  • Ranking;
+
+  • Conversation tracking.
+
 
 Implementation:
-• An ElasticSearch service will be available to search the corpus;
-• A BERT service with Google’s pre-trained model will be available to create sentence embeddings;
-• Learning to rank through a logistic regression classifier that uses as training set the pairs of questions and passages, with their respective relevance judgments provided in TRECCASTeval;
-• Information retrieval algorithms (LMD, RM3, etc), featuring expanded queries and historical query expansion;
-• Performance analysis using predefined metrics.
+
+  • An ElasticSearch service will be available to search the corpus;
+
+  • A BERT service with Google’s pre-trained model will be available to create sentence embeddings;
+
+  • Learning to rank through a logistic regression classifier that uses as training set the pairs of questions and passages, with their respective relevance judgments provided in TRECCASTeval;
+
+  • Information retrieval algorithms (LMD, RM3, etc), featuring expanded queries and historical query expansion;
+
+  • Performance analysis using predefined metrics.
